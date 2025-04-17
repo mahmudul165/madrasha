@@ -179,9 +179,14 @@
 
 
 // pages/index.js
+import HeroBanner from '@/components/common/Banner';
 import Head from 'next/head'
 import Script from 'next/script'
-
+const images = [
+  "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
+  "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
+  "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg"
+];
 export default function Home() {
   return (
     <>
@@ -287,13 +292,14 @@ export default function Home() {
       </nav> */}
 
       {/* Hero */}
-      <section className="hero" id="home">
+      {/* <section className="hero" id="home">
         <div className="container">
           <h1>স্বাগতম আমাদের মাদ্রাসায়</h1>
           <p>আলোকিত জীবন গঠনে দ্বীনি ও সাধারণ শিক্ষার সমন্বয়</p>
           <a href="#admission" className="btn btn-custom mt-3">ভর্তি নিন</a>
         </div>
-      </section>
+      </section> */}
+       <HeroBanner name="" />
 
       {/* About */}
       <section id="about" className="py-5">
@@ -344,11 +350,20 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">ছবির গ্যালারি</h2>
           <div className="row">
-            {[1, 2, 3].map((img, i) => (
-              <div className="col-md-4 mb-3" key={i}>
-                <img src={`https://via.placeholder.com/400x250`} className="img-fluid gallery-img" alt="ছবি" />
-              </div>
-            ))}
+         
+
+
+          {images.map((img, i) => (
+  <div className="col-md-4 mb-3" key={i}>
+    <img
+      src={img}
+      className="img-fluid gallery-img"
+      alt={`ছবি ${i + 1}`}
+      style={{ width: "100%", height: "250px", objectFit: "cover", borderRadius: "8px" }}
+    />
+  </div>
+))}
+
           </div>
         </div>
       </section>
@@ -389,7 +404,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer
       <footer>
         <div className="container">
           <p>কপিরাইট © ২০২৫ | আমাদের মাদ্রাসা | সর্বস্বত্ব সংরক্ষিত</p>
@@ -399,7 +414,7 @@ export default function Home() {
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         strategy="beforeInteractive"
-      />
+      /> */}
     </>
   )
 }

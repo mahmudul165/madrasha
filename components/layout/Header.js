@@ -125,10 +125,10 @@ function Header() {
               </Nav.Link>
               <Nav.Link
                 as="span"
-                className={`${router.pathname === "/our-brand" ? "active-li" : ""
+                className={`${router.pathname === "/terachers" ? "active-li" : ""
                   } text-nowrap`}
               >
-                <Link href={"/our-brand"}>শিক্ষক মন্ডলী</Link>
+                <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
               </Nav.Link>
             </Nav>
           </div>

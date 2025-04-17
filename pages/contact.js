@@ -188,7 +188,7 @@ function contact() {
     <>
       {" "}
       {/* <RouteNavSlider router="Contact Us" /> */}
-      <HeroBanner name="Contact Us" />
+      <HeroBanner name="/যোগাযোগ" />
       <div className="  container my-5  ">
         <div className="rounded border position-relative">
           <OurLocationCard />
@@ -252,7 +252,7 @@ function contact() {
           </div>
         </div>
       </div>
-      <OurOffices />
+      {/* <OurOffices /> */}
     </>
   );
 }

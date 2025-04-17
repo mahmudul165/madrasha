@@ -81,8 +81,8 @@ export default function ThreeDotsWave() {
             </motion.div> */}
 
       {/* <img src="/loadder.gif" alt="loader"></img> */}
-      {/* <img src="/loader/loader-1.gif" alt="loader"></img> */}
-      <img src="/loader/loader-3.gif" alt="loader"></img>
+      <img src="/loader/loader.gif" alt="loader"></img>
+      {/* <img src="/loader/loader-3.gif" alt="loader"></img> */}
     </div>
   );
 }
