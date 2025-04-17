@@ -108,26 +108,24 @@ const Footer = () => {
       <Row>
         <Col md={3} sm={12}>
           {/* <Row className='justify-center w-50'> */}
-          <Image className="w-50" src="main-logo.png" alt="logo" />
+          {/* <Image className="w-50" src="main-logo.png" alt="logo" /> */}
+          <Image className="w-50" src="logo2.png" alt="logo" />
           {/* </Row> */}
           {/* <Row className="my-3"> */}
 
 
           
           <p className=" text-sm  my-3 w-100 text-justify ">
-            Sultan Premium tea bestows the freshness of 100% premium garden tea
-            carefully collected from the best tea gardens. Each cup of sultan
-            tea gives strong liquor, unique color, flavor and taste and leaves
-            you fresh and  spirited.
+          একটি ইসলামী শিক্ষা প্রতিষ্ঠান, যা শিশুদের মধ্যে ধর্মীয় শিক্ষা ও নৈতিক মূল্যবোধের প্রতি সচেতনতা সৃষ্টি করতে কাজ করে। আমাদের উদ্দেশ্য হল শিশুদেরকে আধুনিক শিক্ষা এবং ইসলামী শিক্ষার মাধ্যমে আলোকিত জীবন গড়তে সহায়তা করা।
           </p>
-          <Image
+          {/* <Image
         src="/green-tea-removebg.jpg" // Put your image inside public/images folder
         alt="Sultan Tea"
         width={450}
         height={300}
         className="img-fluid rounded  py-1"
         
-      />
+      /> */}
 
 
 
@@ -194,7 +192,7 @@ const Footer = () => {
           <div className="container footer-card p-2 bg-success  ">
             <div className=" ">
               <div className="">
-                <p className="text-white fs-4 py-3 fw-bold">Sultan Tea Care</p>
+                <p className="text-white fs-4 py-3 fw-bold">তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা</p>
               </div>
               <div className=" mt-2 ">
                 <div className="d-flex gap-2 justify-content-center  py-2 ">
