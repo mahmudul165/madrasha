@@ -194,6 +194,26 @@ function Header() {
 
 
                     </Nav.Link> */}
+
+
+
+
+
+
+<Nav.Item
+                      as="li"
+                      className={`${router.pathname === "/teachers" ? "active-li" : ""
+                        }`}
+                    >
+                      <Nav.Link as="span">
+                        <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
+
+                      </Nav.Link>
+                    </Nav.Item>
+
+
+
+
                   </Nav>
                 </div>
                 
