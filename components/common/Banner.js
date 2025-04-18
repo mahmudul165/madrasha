@@ -97,7 +97,7 @@
 //     "/": [
 //       {
 //         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
-//         title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা - হোম"
+//         title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা- হোম"
 //       },
 //       {
 //         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
@@ -249,7 +249,7 @@
 //     "/": [
 //       {
 //         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
-//         title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা - হোম"
+//         title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা- হোম"
 //       },
 //       {
 //         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
@@ -434,7 +434,7 @@ const HeroBanner = ({ name }) => {
       },
       {
         image: "/teacher-3.jpg",
-        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা - হোম"
+        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা- হোম"
       },
       {
         image: "/teacher-2.jpg",

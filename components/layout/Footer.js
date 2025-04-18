@@ -192,11 +192,11 @@ const Footer = () => {
           <ul className="demo">
         
             <li><Link href="/about">পরিচিতি </Link></li>
-            <li><Link href="/shop">বিভাগ</Link></li>
-            <li><Link href="/press-releases">শিক্ষক মন্ডলী</Link></li>
-            <li><Link href="/carrier">নোটিশ</Link></li>
-            <li><Link href="/carrier">গ্যালারি</Link></li>
-            <li><Link href="/carrier">ভর্তি</Link></li>
+            <li><Link href="/">বিভাগ</Link></li>
+            <li><Link href="/teachers">শিক্ষক মন্ডলী</Link></li>
+            <li><Link href="/notices">নোটিশ</Link></li>
+            <li><Link href="/picture">গ্যালারি</Link></li>
+            <li><Link href="#">ভর্তি</Link></li>
             <li><Link href="/contact">যোগাযোগ</Link></li>
             {/* <li><a href="#">Term and condition</a></li> */}
           </ul>
@@ -230,18 +230,18 @@ const Footer = () => {
             <div className="mt-2">
               <div className="d-flex gap-2 justify-content-center py-2">
                 <FiPhoneCall size={35} className="text-warning" />
-                <p className="fs-3 fw-bold text-white">+8809678111777</p>
+                <p className="fs-3 fw-bold text-white">+8809678111744</p>
               </div>
-              <p className="text-white fs-6 fw-bold">Mobile: 01708 588 590</p>
+              <p className="text-white fs-6 fw-bold">Mobile: 01708 588 450</p>
               <p className="text-white fs-6 fw-bold">
-                Email: Sultan@heritagebd.com
+                Email: taqua@heritagebd.com
               </p>
             </div>
           </div>
 
           <div className="mt-2 py-1 d-flex gap-4 align-items-center justify-content-center">
             <a
-              href="https://www.facebook.com/SultanTeaBangladesh"
+              href="https://www.facebook.com/share/157jx9bAqr/?mibextid=qi2Omg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -263,7 +263,7 @@ const Footer = () => {
       <Row className="border-top pt-3 mt-2 text-end">
         <Col>
           {/* <p className="text-end">&copy; Copyright 2022 Our Company</p> */}
-          <p>কপিরাইট © ২০২৫ | আমাদের মাদ্রাসা | সর্বস্বত্ব সংরক্ষিত</p>
+          <p>কপিরাইট © ২০২৫ | তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা | সর্বস্বত্ব সংরক্ষিত</p>
         </Col>
       </Row>
     </Container>
