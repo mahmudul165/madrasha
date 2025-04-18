@@ -19,7 +19,7 @@ function Notice() {
                                                 src={notice.image}
                                                 alt={notice.title}
                                                 width={280}
-                                                height={160}
+                                                height={360}
                                                 className="img-fluid rounded"
                                             />
                                         )}
@@ -44,8 +44,9 @@ function Notice() {
 
         .notice-card {
           flex: 0 0 auto;
-          width: 350px;
-          height: 300px;
+          width: 370px;
+          height: 400px;
+          padding: 10px
           background-color: #f9f9f9;
           border-radius: 8px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
