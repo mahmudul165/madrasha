@@ -75,7 +75,7 @@ function Header() {
         // }`}
         >
 
-          <div className="col-lg-4  col-sm-3  col-3">
+          <div className="col-lg-5  col-sm-3  col-3">
             <Nav
               className="m-auto p-1 align-items-center  justify-content-center "
               as="ul"
@@ -94,7 +94,7 @@ function Header() {
               </Nav.Item>
             </Nav>
           </div>
-          <div className="col-lg-4  d-md-none d-lg-block   d-none   ">
+          <div className="col-lg-3  d-md-none d-lg-block   d-none   ">
             <Nav className=" justify-content-end " as="ul">
               <Nav.Item
                 as="li"
@@ -196,13 +196,7 @@ function Header() {
                     </Nav.Link> */}
                   </Nav>
                 </div>
-                <Nav.Link
-                as="span"
-                className={`${router.pathname === "/teachers" ? "active-li" : ""
-                    }`}
-              >
-                <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
-              </Nav.Link>
+                
 
                 <NavDropdown
                   title="গ্যালারি"

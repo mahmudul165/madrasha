@@ -188,6 +188,7 @@ import Link from 'next/link';
 import Script from 'next/script'
 import Gallery from '@/components/common/Gallery';
 import Notice from '@/components/common/Notice';
+import AdmissionInfo from '@/components/home/AdmissionInfo';
 
 export default function Home() {
   return (
@@ -303,13 +304,13 @@ export default function Home() {
       <Gallery/>
 
       {/* Admission */}
-      <section id="admission" className="py-5">
+      {/* <section id="admission" className="py-5">
         <div className="container">
           <h2 className="section-title">ভর্তি তথ্য</h2>
           <p className="text-center">ভর্তির জন্য প্রয়োজন: জন্ম সনদ, ২ কপি ছবি, ও ভর্তি ফি ৫০০ টাকা। সময়: সকাল ৯টা - দুপুর ১টা। বয়স: ৫ বছরের উপরে।</p>
         </div>
-      </section>
-
+      </section> */}
+<AdmissionInfo/>
       {/* Contact */}
       <section id="contact" className="bg-light py-5">
         <div className="container">
