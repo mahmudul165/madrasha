@@ -207,7 +207,7 @@ function Header() {
                     <Link href={"/picture"}>ছবি</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item as="li">
-                    <Link href={"/video"}>ভিডিও</Link>
+                    <Link href={"/"}>ভিডিও</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link

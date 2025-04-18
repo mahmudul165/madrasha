@@ -124,7 +124,7 @@ function OurOffices() {
       </style>
       <HeroBanner></HeroBanner>
 
-      <SectionTitle title="Our teachers" />
+      <SectionTitle title="আমাদের শিক্ষকরা" />
       <Row>
         {teachers.map((teacher) => (
           <Col md={4} key={teacher._id} className="my-2 py-2">

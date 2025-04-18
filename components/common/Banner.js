@@ -517,11 +517,11 @@ const HeroBanner = ({ name }) => {
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height: "75vh", // Increased height for better impact
+                height: "77vh", // Increased height for better impact
               }}
             >
               <motion.div
-                className="position-absolute w-100 bottom-0 py-5"
+                className="position-absolute w-100 bottom-0 py-1"
                 style={{
                   backgroundColor: "rgba(0, 0, 0, 0.4)", // Darker overlay for better contrast
                 }}
@@ -530,7 +530,7 @@ const HeroBanner = ({ name }) => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="d-flex justify-content-between container align-items-center gap-2">
-                  <div className="bg-light px-4 py-3 rounded shadow-lg">
+                  <div className="bg-light px-4 py-1 rounded shadow-lg">
                     <motion.h2
                       className="fs-4 fw-bold text-capitalize text-dark"
                       initial={{ y: 50, opacity: 0 }}
