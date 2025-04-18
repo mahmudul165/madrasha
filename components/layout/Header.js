@@ -219,24 +219,6 @@ function Header() {
                   <Link href={"/notices"}>নোটিশ</Link>
 
                 </Nav.Link>
-{/* 
-                <Nav.Link
-                  as="span"
-                  className={`${router.pathname === "/notice" ? "active-li" : ""
-                    }`}
-                >
-                  <Link href={"/notice"}>নোটিশ</Link>
-
-                </Nav.Link>
-
-                <Nav.Link
-                  as="span"
-                  className={`${router.pathname === "/carrier" ? "active-li" : ""
-                    }`}
-                >
-                  <Link href={"/carrier"}>ভর্তি</Link>
-
-                </Nav.Link> */}
 
                 <Nav.Link
                   as="span"
@@ -244,8 +226,6 @@ function Header() {
                     } text-nowrap`}
                 >
                   <Link href={"/contact"}>যোগাযোগ</Link>
-
-
                 </Nav.Link>
 
               </Offcanvas.Body>
