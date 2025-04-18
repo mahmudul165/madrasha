@@ -8,11 +8,11 @@ const AdmissionInfo = () => {
             <div className="">
                 {/* <h2 className="text-center text-success fw-bold mb-4">ভর্তি তথ্য</h2> */}
                 <h2 className="section-title">ভর্তি তথ্য</h2>
-                <div className="row justify-content-center">
+                <div className="gx-0 row justify-content-center">
                     <div className="col-md-10">
                     {/* start */}
-                    <div className="card shadow-lg border-0 rounded-4 p-4">
-                            <div className="gx-0 card-body p-4">
+                    <div className="gx-0 card shadow-lg border-0 rounded-4 p-4">
+                            <div className="  card-body p-4">
                                 {/* উপরের বিবরণ */}
                                 <div className="mb-4">
                                     <h5 className="text-success mb-3">🔰 ভর্তির জন্য প্রয়োজনীয় তথ্য</h5>
