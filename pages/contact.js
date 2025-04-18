@@ -1,21 +1,6 @@
-// import React from 'react'
-// import ContactUs from '@/components/contact/ContactUs'
-// import OurOffices from '@/components/home/our-offices/OurOffices'
-// import RouteNavSlider from '@/components/common/RouteNavSlider'
-// function contact() {
-//   return (
-//     <> <RouteNavSlider router='Contact Us'/>
-//       <ContactUs/>
-//       <OurOffices/>
-//       </>
-//   )
-// }
-
-// export default contact
 import HeroBanner from "@/components/common/Banner";
 import { MyButton } from "@/components/common/Buttons";
 import IconWithBackground from "@/components/common/IconWithBackground";
-import OurOffices from "@/components/home/our-offices/OurOffices";
 import { Card, Form } from "react-bootstrap";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 //test
@@ -24,11 +9,12 @@ import axios from "axios";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ContactForm from "@/components/common/ContactForm";
 
 const OurLocationCard = () => {
   return (
     <>
-      <Card className="card border rounded w-25 p-4  position-absolute top-50  mx-5 translate-middle-y d-sm-none d-md-block d-xs-none pb-5">
+      <Card className=" card border rounded w-25 p-4  position-absolute top-50  mx-5 translate-middle-y d-sm-none d-md-block d-xs-none pb-5">
         <div className="d-grid my-4">
           <MyButton
             style={{ backgroundColor: "#59330E" }}
@@ -42,151 +28,20 @@ const OurLocationCard = () => {
         <h5 className="my-2">অবস্থান ঠাকুরগাঁও</h5>
         <div className="mt-2">
           <p>
-             ঠিকানা: কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও
+            ঠিকানা: কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও
           </p>
           <p>মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০</p>
           <p>আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
-          
 
- 
+
+
         </div>
       </Card>
     </>
   );
 };
 //test
-const ContactForm = () => {
-  const { apiUrl } = useAuth();
-  // console.log('test',`${apiUrl.apiRootUrl}`)
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
 
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    let errors = {};
-    if (!formData.name) {
-      errors.name = "Name is required";
-    }
-    if (!formData.email) {
-      errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Invalid email address";
-    }
-    if (!formData.message) {
-      errors.message = "Message is required";
-    }
-    return errors;
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const errors = validate();
-    if (Object.keys(errors).length === 0) {
-      axios
-        .post(`${apiUrl.apiRootUrl}/api/v1/contact`, formData)
-        .then((response) => {
-          console.log(response);
-          toast.success("Form submitted successfully!");
-        })
-        .catch((error) => {
-          console.log(error);
-          toast.error(error);
-        });
-    } else {
-      setErrors(errors);
-    }
-  };
-
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  return (
-    <>
-      <Form id="contact-form" name="contact-form p-2" onSubmit={handleSubmit}>
-        <h2 className="mb-2 fs-5 fw-bold cus-color-secondary">যোগাযোগ</h2>
-        <ToastContainer position="top-center" />
-        <Form.Group controlId="name" className="mb-3">
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="আপনার নাম" 
-            value={formData.name}
-            onChange={handleChange}
-            isInvalid={!!errors.name}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.name}
-          </Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group controlId="email" className="mb-3">
-          <Form.Control
-            type="text"
-            name="email"
-            placeholder="আপনার ইমেইল"
-            যোগাযোগ
-
-            value={formData.email}
-            onChange={handleChange}
-            isInvalid={!!errors.email}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.email}
-          </Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group controlId="phone" className="mb-3">
-          <Form.Control
-            type="text"
-            name="phone"
-            placeholder="আপনার ফোন"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </Form.Group>
-
-        <Form.Group controlId="message" className="mb-3">
-          <Form.Control
-            className="p-4"
-            as="textarea"
-            rows={10}
-            name="message"
-            placeholder="আপনার বার্তা"
-            
-            value={formData.message}
-            onChange={handleChange}
-            isInvalid={!!errors.message}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.message}
-          </Form.Control.Feedback>
-        </Form.Group>
-
-        {/* <MyButton
-          type="submit"
-          size="lg"
-          className="text-white px-5 cus-bg-primary"
-        >
-          SEND
-        </MyButton> */}
-        <button
-          type="submit"
-          size="lg"
-          className=" text-white px-5 cus-bg-primary py-2 btn "
-          // onClick={handleClick}
-        >
-         পাঠান
-        </button>
-      </Form>
-    </>
-  );
-};
 
 function contact() {
   return (
@@ -194,14 +49,14 @@ function contact() {
       {" "}
       {/* <RouteNavSlider router="Contact Us" /> */}
       <HeroBanner name="/যোগাযোগ" />
-      <div className="  container my-5  ">
+      <div className="   container my-5  ">
         <div className="rounded border position-relative">
           <OurLocationCard />
           {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.63047757197!2d88.2948711!3d26.1452727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4e5c6230e95a1%3A0x293311525c5ffcd8!2sLahiri!5e0!3m2!1sen!2sbd!4v1744965695849!5m2!1sen!2sbd"  width="100%"
             height="450px"
             frameBorder="0"
             aria-hidden="false"></iframe> */}
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.63047757197!2d88.2948711!3d26.1452727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4e5c6230e95a1%3A0x293311525c5ffcd8!2sLahiri!5e0!3m2!1sen!2sbd!4v1744965695849!5m2!1sen!2sbd"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.63047757197!2d88.2948711!3d26.1452727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4e5c6230e95a1%3A0x293311525c5ffcd8!2sLahiri!5e0!3m2!1sen!2sbd!4v1744965695849!5m2!1sen!2sbd"
             width="100%"
             height="450px"
             frameBorder="0"
@@ -215,19 +70,19 @@ function contact() {
           ></iframe> */}
         </div>
 
-        <div className="row my-4">
+        <div className=" row my-4">
           <div className="col-md-4  cus-color-secondary">
             <Card className="card border rounded  p-5 mb-4 ">
               <div className="d-flex gap-4 align-items-center">
                 <IconWithBackground>
                   <FaPhoneAlt size={25} className="" />
                 </IconWithBackground>
-                 
- 
+
+
                 <div className="cus-color-secondary">
                   <h5 className="mb-2">মোবাইল</h5>
                   <p className="cus-color-secondary">
-                  মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০
+                    মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০
                   </p>{" "}
                   <p className="cus-color-secondary">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
                 </div>
@@ -255,7 +110,7 @@ function contact() {
                 <div>
                   <h5 className="mb-2">ঠিকানা</h5>
                   <p className="cus-color-secondary">
-                  কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও{" "}
+                    কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও{" "}
                   </p>
                 </div>
               </div>

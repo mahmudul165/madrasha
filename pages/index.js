@@ -181,8 +181,6 @@
 // pages/index.js
 import HeroBanner from '@/components/common/Banner';
 import AboutSection from '@/components/home/AboutSection';
-
-
 import Head from 'next/head'
 import Link from 'next/link';
 import Script from 'next/script'
@@ -190,6 +188,11 @@ import Gallery from '@/components/common/Gallery';
 import Notice from '@/components/common/Notice';
 import AdmissionInfo from '@/components/home/AdmissionInfo';
 import DepartmentsInfo from '@/components/home/DepartmentsInfo';
+import ContactForm from '@/components/common/ContactForm';
+
+import IconWithBackground from "@/components/common/IconWithBackground";
+import { Card, Form } from "react-bootstrap";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -281,32 +284,58 @@ export default function Home() {
       {/* Admission */}
       <AdmissionInfo />
       {/* Contact */}
-      <section id="contact" className="bg-light py-5">
-        <div className="container">
-          <h2 className="section-title">যোগাযোগ</h2>
-          <div className="row">
-            <div className="col-md-6">
-              <p><strong>ঠিকানা:</strong> কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও</p>
-              <p><strong>ফোন:</strong> ০১৭xxxxxxxx</p>
-              <p><strong>ইমেইল:</strong> madrasa@email.com</p>
-            </div>
-            <div className="col-md-6">
-              <form>
-                <div className="mb-3">
-                  <input type="text" className="form-control" placeholder="আপনার নাম" />
+      <section className='container my-2 p-2'>
+      <div className=" row my-4">
+          <div className="col-md-4  cus-color-secondary">
+            <Card className="card border rounded  p-5 mb-4 ">
+              <div className="d-flex gap-4 align-items-center">
+                <IconWithBackground>
+                  <FaPhoneAlt size={25} className="" />
+                </IconWithBackground>
+
+
+                <div className="cus-color-secondary">
+                  <h5 className="mb-2">মোবাইল</h5>
+                  <p className="cus-color-secondary">
+                    মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০
+                  </p>{" "}
+                  <p className="cus-color-secondary">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
                 </div>
-                <div className="mb-3">
-                  <input type="email" className="form-control" placeholder="আপনার ইমেইল" />
+              </div>
+            </Card>
+            <Card className="card border rounded  p-5 mb-4">
+              <div className="d-flex gap-4 align-items-center">
+                <IconWithBackground>
+                  <FaEnvelope size={25} className="" />
+                </IconWithBackground>
+
+                <div>
+                  <h5 className="mb-2">ইমেইল</h5>
+                  <p className="cus-color-secondary">madashatakua@heritagebd.com</p>
+                  <p className="cus-color-secondary">info@heritagebd.com</p>
                 </div>
-                <div className="mb-3">
-                  <textarea className="form-control" rows="4" placeholder="আপনার বার্তা"></textarea>
+              </div>
+            </Card>
+            <Card className="card border rounded  p-5 ">
+              <div className="d-flex gap-4 align-items-center">
+                <IconWithBackground>
+                  <FaMapMarkerAlt size={25} className="" />
+                </IconWithBackground>
+
+                <div>
+                  <h5 className="mb-2">ঠিকানা</h5>
+                  <p className="cus-color-secondary">
+                    কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও{" "}
+                  </p>
                 </div>
-                <button className="btn btn-custom w-100" type="submit">পাঠিয়ে দিন</button>
-              </form>
-            </div>
+              </div>
+            </Card>
+          </div>
+          <div className="col-md-8">
+            <ContactForm />
           </div>
         </div>
-      </section>
+        </section>
     </>
   )
 }

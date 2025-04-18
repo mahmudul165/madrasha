@@ -175,7 +175,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Container fluid className="p-4 bg-white" style={{ backgroundColor: "#F3F3F3" }}>
+    <Container fluid className="p-4 bg-light mt-3" style={{ backgroundColor: "#F3F3F3" }}>
       <Row>
         <Col md={3} sm={12}>
           <Image className="w-50" src="logo2.png" alt="logo" />
