@@ -5,7 +5,7 @@ import aboutImage from '/public/img-2.png'; // ছবিটি public ফোল�
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-5 bg-light">
+    <section id="about" className="py-5 bg-white">
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="display-5 fw-bold text-success border-bottom border-success d-inline-block pb-2">

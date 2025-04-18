@@ -60,8 +60,8 @@ const DepartmentsInfo = () => {
         </p>
 
         <h4 className="text-primary mt-4 mb-3">🌟 মাদ্রাসার বৈশিষ্ট্যসমূহ:</h4>
-        <ul className="list-group list-group-numbered mb-4">
-          <li className="list-group-item">
+        <ul className="list-group list-group-numbered mb-4 p-2">
+          <li className="list-group-item p-2">
             ২০১৯-২০২৪ পর্যন্ত প্রতিবছর জেডিসি, দাখিল, আলিমে একাধিক সরকারি বৃত্তি ও জিপিএ-৫ সহ শতভাগ উত্তীর্ণ।
           </li>
           <li className="list-group-item">

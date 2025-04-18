@@ -4,7 +4,7 @@ import { FaIdCard, FaClock, FaChild, FaMoneyBillWave, FaBook, FaPhone, FaRegCale
 
 const AdmissionInfo = () => {
     return (
-        <section id="admission" className="py-5 bg-light">
+        <section id="admission" className="py-5 bg-white">
             <div className="">
                 {/* <h2 className="text-center text-success fw-bold mb-4">ভর্তি তথ্য</h2> */}
                 <h2 className="section-title">ভর্তি তথ্য</h2>
