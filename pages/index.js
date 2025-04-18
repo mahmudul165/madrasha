@@ -189,6 +189,7 @@ import Script from 'next/script'
 import Gallery from '@/components/common/Gallery';
 import Notice from '@/components/common/Notice';
 import AdmissionInfo from '@/components/home/AdmissionInfo';
+import DepartmentsInfo from '@/components/home/DepartmentsInfo';
 
 export default function Home() {
   return (
@@ -271,28 +272,8 @@ export default function Home() {
       {/* About */}
       <AboutSection />
       {/* Academics */}
-      <section id="academics" className="bg-light py-5">
-        <div className="container">
-          <h2 className="section-title">বিভাগসমূহ</h2>
-          <div className="row text-center">
-            {['হিফজ বিভাগ', 'নূরানী শিক্ষা', 'সাধারণ শিক্ষা', 'তাজবিদ বিভাগ'].map((title, index) => (
-              <div className="col-md-3 mb-3" key={index}>
-                <div className="card p-3 border-0 shadow-sm">
-                  <h5>{title}</h5>
-                  <p>
-                    {{
-                      'হিফজ বিভাগ': 'পূর্ণ কুরআন মুখস্থ করানো হয়।',
-                      'নূরানী শিক্ষা': 'শিশুদের জন্য মৌলিক ইসলামী শিক্ষা।',
-                      'সাধারণ শিক্ষা': 'প্রাথমিক থেকে অষ্টম শ্রেণি পর্যন্ত।',
-                      'তাজবিদ বিভাগ': 'সঠিকভাবে কুরআন তিলাওয়াত শেখানো হয়।'
-                    }[title]}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DepartmentsInfo/>
+      
       {/* Notice */}
       <Notice />
       {/* Gallery */}
