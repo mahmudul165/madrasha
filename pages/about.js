@@ -193,7 +193,8 @@ export default function MadrasahPage() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-extrabold text-center text-green-800 drop-shadow-lg py-1"
+          className="display-6 my-2 py-2 fw-bold text-success text-4xl md:text-5xl font-extrabold text-center text-green-800 drop-shadow-lg py-1"
+          // className="display-5 fw-bold text-success text-center border-bottom border-success d-inline-block pb-2"
         >
           তাকওয়া নূরানী ও হাফেজিয়া মাদ্রাসা 
         </motion.h1>
