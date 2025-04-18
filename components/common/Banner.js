@@ -429,25 +429,22 @@ const HeroBanner = ({ name }) => {
   const slidesData = {
     "/": [
       {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
-        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা - হোম"
-      },
-      {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
-        title: "ইসলামিক শিক্ষার আলো ছড়াই"
-      },
-      {
         image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
-        title: "শিক্ষার্থীদের হিফজ প্রতিযোগিতা"
-      },
-      {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
         title: "আদর্শ চরিত্র গঠনে শিক্ষা"
       },
       {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
-        title: "জীবনের জন্য কুরআন"
-      }
+        image: "/teacher-3.jpg",
+        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা - হোম"
+      },
+      {
+        image: "/teacher-2.jpg",
+        title: "ইসলামিক শিক্ষার আলো ছড়াই"
+      },
+      {
+        image: "/teacher-1.jpg",
+        title: "শিক্ষার্থীদের হিফজ প্রতিযোগিতা"
+      },
+           
     ],
     "/about": [
       {
@@ -459,13 +456,13 @@ const HeroBanner = ({ name }) => {
         title: "দীর্ঘ ইতিহাস ও গৌরব"
       },
       {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
+        image: "/teacher-2.jpg",
         title: "শিক্ষক ও ছাত্রদের একতা"
       }
     ],
     "/contact": [
       {
-        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
+        image: "/teacher-2.jpg",
         title: "শিক্ষক ও ছাত্রদের একতা"
       },
       {
@@ -475,6 +472,20 @@ const HeroBanner = ({ name }) => {
       {
         image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
         title: "দীর্ঘ ইতিহাস ও গৌরব"
+      }
+    ],
+    "/teachers": [
+      {
+        image: "/teacher-3.jpg",
+        title: "আমাদের সম্পর্কে"
+      },
+      {
+        image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
+        title: "দীর্ঘ ইতিহাস ও গৌরব"
+      },
+      {
+        image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
+        title: "শিক্ষক ও ছাত্রদের একতা"
       }
     ]
   };
@@ -506,7 +517,7 @@ const HeroBanner = ({ name }) => {
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height: "60vh", // Increased height for better impact
+                height: "75vh", // Increased height for better impact
               }}
             >
               <motion.div

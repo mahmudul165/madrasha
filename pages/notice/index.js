@@ -3,8 +3,8 @@ import dynamic from "next/dynamic";
 import ThreeDotsWave from "@/components/common/ThreeDot";
 import RouteNavSlider from "@/components/common/RouteNavSlider";
 import HeroBanner from "@/components/common/Banner";
-const BlogsShowcase = dynamic(
-  () => import("/components/blogs/BlogsShowcase.js"),
+const NoticeShowcase = dynamic(
+  () => import("/components/notice/NoticeShowcase.js"),
   {
     loading: () => (
       <>
@@ -35,8 +35,8 @@ function TodayDeals({ data }) {
   return (
     <>
       {/* <RouteNavSlider router='blog'/> */}
-      <HeroBanner name="Blog" />
-      <BlogsShowcase data={data} />
+      <HeroBanner name="নোটিশ" />
+      <NoticeShowcase data={data} />
     </>
   );
 }

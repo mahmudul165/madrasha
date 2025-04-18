@@ -116,13 +116,13 @@ function Header() {
                   <Link href={"/press-releases"}>Press Releases</Link>
                 </NavDropdown.Item> */}
               </NavDropdown>
-              <Nav.Link
+              {/* <Nav.Link
                 as="span"
                 className={`${router.pathname === "/our-business" ? "active-li" : ""
                   } text-nowrap`}
               >
                 <Link href={"/our-business"}>বিভাগ</Link>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link
                 as="span"
                 className={`${router.pathname === "/terachers" ? "active-li" : ""
@@ -185,7 +185,7 @@ function Header() {
                         <Link href={"/our-business"}>পরিচিতি</Link>
                       </NavDropdown.Item>
                     </NavDropdown> */}
-                    <Nav.Link
+                    {/* <Nav.Link
                       as="span"
                       className={`${router.pathname === "/our-brand" ? "active-li" : ""
                         } text-nowrap`}
@@ -193,7 +193,7 @@ function Header() {
                       <Link href={"/our-brand"}>বিভাগ</Link>
 
 
-                    </Nav.Link>
+                    </Nav.Link> */}
                   </Nav>
                 </div>
 
@@ -204,19 +204,19 @@ function Header() {
                     }`}
                 >
                   <NavDropdown.Item as="li">
-                    <Link href={"/gallery2"}>গ্যালারি</Link>
-
-
-
+                    <Link href={"/picture"}>ছবি</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as="li">
+                    <Link href={"/video"}>ভিডিও</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
-
+{/* 
                 <Nav.Link
                   as="span"
-                  className={`${router.pathname === "/carrier" ? "active-li" : ""
+                  className={`${router.pathname === "/notice" ? "active-li" : ""
                     }`}
                 >
-                  <Link href={"/carrier"}>নোটিশ</Link>
+                  <Link href={"/notice"}>নোটিশ</Link>
 
                 </Nav.Link>
 
@@ -227,7 +227,7 @@ function Header() {
                 >
                   <Link href={"/carrier"}>ভর্তি</Link>
 
-                </Nav.Link>
+                </Nav.Link> */}
 
                 <Nav.Link
                   as="span"

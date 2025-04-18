@@ -36,17 +36,19 @@ const OurLocationCard = () => {
             size="lg"
             className="fw-bold text-white fs-5"
           >
-            Our Locations{" "}
+            আমাদের অবস্থান
           </MyButton>
         </div>
-        <h5 className="my-2">Located in Motijheel</h5>
+        <h5 className="my-2">অবস্থান ঠাকুরগাঁও</h5>
         <div className="mt-2">
           <p>
-            Address: Head Office: Globe Chamber (1st foor) 104 Motijheel
-            Commercial Area, Dhaka-1000, Bangladesh
+             ঠিকানা: কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও
           </p>
-          <p>Mobile: +880 1708 588 590</p>
-          <p>Ip Phone: +8809678111777</p>
+          <p>মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০</p>
+          <p>আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
+          
+
+ 
         </div>
       </Card>
     </>
@@ -107,13 +109,13 @@ const ContactForm = () => {
   return (
     <>
       <Form id="contact-form" name="contact-form p-2" onSubmit={handleSubmit}>
-        <h2 className="mb-2 fs-5 fw-bold cus-color-secondary">Contact Form</h2>
+        <h2 className="mb-2 fs-5 fw-bold cus-color-secondary">যোগাযোগ</h2>
         <ToastContainer position="top-center" />
         <Form.Group controlId="name" className="mb-3">
           <Form.Control
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="আপনার নাম" 
             value={formData.name}
             onChange={handleChange}
             isInvalid={!!errors.name}
@@ -127,7 +129,9 @@ const ContactForm = () => {
           <Form.Control
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="আপনার ইমেইল"
+            যোগাযোগ
+
             value={formData.email}
             onChange={handleChange}
             isInvalid={!!errors.email}
@@ -141,7 +145,7 @@ const ContactForm = () => {
           <Form.Control
             type="text"
             name="phone"
-            placeholder="Phone"
+            placeholder="আপনার ফোন"
             value={formData.phone}
             onChange={handleChange}
           />
@@ -153,7 +157,8 @@ const ContactForm = () => {
             as="textarea"
             rows={10}
             name="message"
-            placeholder="Message"
+            placeholder="আপনার বার্তা"
+            
             value={formData.message}
             onChange={handleChange}
             isInvalid={!!errors.message}
@@ -176,7 +181,7 @@ const ContactForm = () => {
           className=" text-white px-5 cus-bg-primary py-2 btn "
           // onClick={handleClick}
         >
-          SEND
+         পাঠান
         </button>
       </Form>
     </>
@@ -192,13 +197,22 @@ function contact() {
       <div className="  container my-5  ">
         <div className="rounded border position-relative">
           <OurLocationCard />
-          <iframe
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.63047757197!2d88.2948711!3d26.1452727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4e5c6230e95a1%3A0x293311525c5ffcd8!2sLahiri!5e0!3m2!1sen!2sbd!4v1744965695849!5m2!1sen!2sbd"  width="100%"
+            height="450px"
+            frameBorder="0"
+            aria-hidden="false"></iframe> */}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.63047757197!2d88.2948711!3d26.1452727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4e5c6230e95a1%3A0x293311525c5ffcd8!2sLahiri!5e0!3m2!1sen!2sbd!4v1744965695849!5m2!1sen!2sbd"
+            width="100%"
+            height="450px"
+            frameBorder="0"
+            aria-hidden="false"></iframe>
+          {/* <iframe
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Globe%20Chamber%20(1st%20foor)%20104%20Motijheel%20Commercial%20Area,%20Dhaka-1000,%20Bangladesh+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             width="100%"
             height="450px"
             frameBorder="0"
             aria-hidden="false"
-          ></iframe>
+          ></iframe> */}
         </div>
 
         <div className="row my-4">
@@ -208,13 +222,14 @@ function contact() {
                 <IconWithBackground>
                   <FaPhoneAlt size={25} className="" />
                 </IconWithBackground>
-
+                 
+ 
                 <div className="cus-color-secondary">
-                  <h5 className="mb-2">Phone</h5>
+                  <h5 className="mb-2">মোবাইল</h5>
                   <p className="cus-color-secondary">
-                    Mobile-01708 588 590
+                  মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০
                   </p>{" "}
-                  <p className="cus-color-secondary">Ip Phone: +8809678111777</p>
+                  <p className="cus-color-secondary">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
                 </div>
               </div>
             </Card>
@@ -225,8 +240,8 @@ function contact() {
                 </IconWithBackground>
 
                 <div>
-                  <h5 className="mb-2">Email</h5>
-                  <p className="cus-color-secondary">sultan@heritagebd.com</p>
+                  <h5 className="mb-2">ইমেইল</h5>
+                  <p className="cus-color-secondary">madashatakua@heritagebd.com</p>
                   <p className="cus-color-secondary">info@heritagebd.com</p>
                 </div>
               </div>
@@ -238,10 +253,9 @@ function contact() {
                 </IconWithBackground>
 
                 <div>
-                  <h5 className="mb-2">Address</h5>
+                  <h5 className="mb-2">ঠিকানা</h5>
                   <p className="cus-color-secondary">
-                    Head Office: Globe Chamber (1st foor) 104 Motijheel
-                    Commercial Area,Dhaka-1000, Bangladesh{" "}
+                  কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও{" "}
                   </p>
                 </div>
               </div>

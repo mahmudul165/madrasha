@@ -207,12 +207,12 @@ const Footer = () => {
           প্রচারমূলক ভিডিও
           </h1>
           <div className={isMobile ? "" : "mx-5"}>
-            <div className="ele-center">
+            <div className="ele-center">              
               <iframe
-                src="https://streamable.com/e/wpdk6h?autoplay=1"
+                src="https://streamable.com/e/av8o8r?autoplay=1"
                 frameBorder={0}
                 width="302px"
-                height="170px"
+                height="200px"
                 allow="autoplay"
               />
             </div>

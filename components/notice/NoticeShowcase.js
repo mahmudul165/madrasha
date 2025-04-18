@@ -6,19 +6,11 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
 
 import DemoImage from "/public/New folder/arfan-abdulazeez-oi0FvNhkHy8-unsplash.jpg";
-// import useAuth from "../../hook/useAuth";
-// import { useCart } from "react-use-cart";
-function BlogsShowcase({ data }) {
-  // const { BuyNow } = useAuth();
-  // const { addItem } = useCart();
-  // Our custom easing
-  let easing = [0.6, -0.05, 0.01, 0.99];
-  //console.log("my data", data);
-  // animate: defines animation
-  // initial: defines initial state of animation or stating point.
-  // exit: defines animation when component exits
 
-  // Custom variant
+function BlogsShowcase({ data }) {
+ 
+  let easing = [0.6, -0.05, 0.01, 0.99];
+ 
   const fadeInUp = {
     initial: {
       y: 60,
@@ -62,7 +54,7 @@ function BlogsShowcase({ data }) {
                 className="card border-0 "
               >
                 {/* {`blogs/${product.title}`} */}
-                <Link href={`/blogs/${product.id}`} passHref>
+                <Link href={`/notice/${product.id}`} passHref>
                   {product.image_one ? (
                     <motion.img
                       initial={{ x: 60, opacity: 0 }}

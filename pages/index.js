@@ -180,13 +180,14 @@
 
 // pages/index.js
 import HeroBanner from '@/components/common/Banner';
+import AboutSection from '@/components/home/AboutSection';
+import { notices  } from '@/data/notices';
+import { images } from '@/data/gallery';
+ 
 import Head from 'next/head'
+import Link from 'next/link';
 import Script from 'next/script'
-const images = [
-  "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/main-slider/image-1.jpg",
-  "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
-  "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg"
-];
+
 export default function Home() {
   return (
     <>
@@ -302,13 +303,7 @@ export default function Home() {
        <HeroBanner name="" />
 
       {/* About */}
-      <section id="about" className="py-5">
-        <div className="container">
-          <h2 className="section-title">আমাদের পরিচিতি</h2>
-          <p className="text-center">আমাদের মাদ্রাসা একটি আধুনিক ও মানসম্মত দ্বীনি শিক্ষা প্রতিষ্ঠান। কুরআন-হাদীসের পাশাপাশি সাধারণ শিক্ষাও প্রদান করা হয়। শিক্ষার্থীদের আদর্শ নাগরিক হিসেবে গড়ে তোলা আমাদের লক্ষ্য।</p>
-        </div>
-      </section>
-
+      <AboutSection />
       {/* Academics */}
       <section id="academics" className="bg-light py-5">
         <div className="container">
@@ -334,7 +329,7 @@ export default function Home() {
       </section>
 
       {/* Notice */}
-      <section id="notice" className="py-5">
+      {/* <section id="notice" className="py-5">
         <div className="container">
           <h2 className="section-title">নোটিশ বোর্ড</h2>
           <ul className="list-group list-group-flush shadow-sm">
@@ -343,30 +338,111 @@ export default function Home() {
             <li className="list-group-item">📌 ৩. ২১ এপ্রিল বার্ষিক ওয়াজ মাহফিল অনুষ্ঠিত হবে।</li>
           </ul>
         </div>
-      </section>
+      </section> */}
+        <div className="container py-5">
+      <h2 className="fw-bold mb-3">নোটিশ বোর্ড</h2>
+
+      {/* Notice list with sliding animation */}
+      <div className="notice-container">
+        {notices.map((notice) => (
+          <div key={notice.id} className="notice-card">
+            
+            <Link href={`/notices/${notice.id}`} legacyBehavior>
+              <a>
+                <div className="d-flex justify-content-center mb-3">
+                  {notice.image && (
+                    <img
+                      src={notice.image}
+                      alt={notice.title}
+                      width={280}
+                      height={160}
+                      className="img-fluid rounded"
+                    />
+                  )}
+                </div>
+                <div className="notice-info">
+                  <h5>{notice.title}</h5>
+                  <p className="text-muted">{notice.date}</p>
+                </div>
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <style jsx>{`
+        .notice-container {
+          display: flex;
+          overflow-x: scroll;
+          gap: 15px;
+          padding: 20px;
+        }
+
+        .notice-card {
+          flex: 0 0 auto;
+          width: 350px;
+          height: 300px;
+          background-color: #f9f9f9;
+          border-radius: 8px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
+
+        .notice-card:hover {
+          transform: scale(1.05);
+        }
+
+        .notice-info {
+          padding: 10px;
+        }
+
+        .notice-info h5 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .notice-info p {
+          font-size: 14px;
+          color: #666;
+        }
+
+        .notice-card a {
+          text-decoration: none;
+          color: inherit;
+        }
+      `}</style>
+    </div>
 
       {/* Gallery */}
-      <section id="gallery" className="bg-light py-5">
-        <div className="container">
-          <h2 className="section-title">ছবির গ্যালারি</h2>
-          <div className="row">
-         
-
-
-          {images.map((img, i) => (
-  <div className="col-md-4 mb-3" key={i}>
-    <img
-      src={img}
-      className="img-fluid gallery-img"
-      alt={`ছবি ${i + 1}`}
-      style={{ width: "100%", height: "250px", objectFit: "cover", borderRadius: "8px" }}
-    />
-  </div>
-))}
-
-          </div>
+      {/* Gallery */}
+<section id="gallery" className="bg-light py-5">
+  <div className="container">
+    <h2 className="section-title">ছবির গ্যালারি</h2>
+    <div className="row">
+      {images?.map((img, i) => (
+        <div className="col-12 col-md-4 mb-3" key={i}>
+          <img
+            src={img}
+            className="img-fluid gallery-img"
+            alt={`ছবি ${i + 1}`}
+            style={{
+              width: "100%",
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              transition: "transform 0.3s ease-in-out",
+            }}
+            // Hover effect to zoom in image on hover
+            onMouseEnter={(e) => e.target.style.transform = "scale(1.1)"}
+            onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Admission */}
       <section id="admission" className="py-5">
@@ -382,7 +458,7 @@ export default function Home() {
           <h2 className="section-title">যোগাযোগ</h2>
           <div className="row">
             <div className="col-md-6">
-              <p><strong>ঠিকানা:</strong> বড়বাজার, হবিগঞ্জ সদর</p>
+              <p><strong>ঠিকানা:</strong> কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও</p>
               <p><strong>ফোন:</strong> ০১৭xxxxxxxx</p>
               <p><strong>ইমেইল:</strong> madrasa@email.com</p>
             </div>
@@ -403,18 +479,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer
-      <footer>
-        <div className="container">
-          <p>কপিরাইট © ২০২৫ | আমাদের মাদ্রাসা | সর্বস্বত্ব সংরক্ষিত</p>
-        </div>
-      </footer>
-
-      <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        strategy="beforeInteractive"
-      /> */}
     </>
   )
 }
