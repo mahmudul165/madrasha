@@ -379,9 +379,15 @@ table tr td span {
   transition: 0.2s all;
 }
 
+/* .active-li {
+  border-bottom: 3px solid var(--secondary-color);
+} */
+
 .active-li {
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid #0b9444;
+  transition: border-color 0.3s ease-in-out;
 }
+
 @media (max-width: 575.98px) {
   /* CSS rules for extra small screens */
 

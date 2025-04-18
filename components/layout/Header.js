@@ -125,8 +125,8 @@ function Header() {
               </Nav.Link> */}
               <Nav.Link
                 as="span"
-                className={`${router.pathname === "/terachers" ? "active-li" : ""
-                  } text-nowrap`}
+                className={`${router.pathname === "/teachers" ? "active-li" : ""
+                    }`}
               >
                 <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
               </Nav.Link>
@@ -196,11 +196,18 @@ function Header() {
                     </Nav.Link> */}
                   </Nav>
                 </div>
+                <Nav.Link
+                as="span"
+                className={`${router.pathname === "/teachers" ? "active-li" : ""
+                    }`}
+              >
+                <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
+              </Nav.Link>
 
                 <NavDropdown
                   title="গ্যালারি"
                   id="collasible-nav-dropdown"
-                  className={`${router.pathname === "/gallery2" ? "active-li" : ""
+                  className={`${router.pathname === "/picture" ? "active-li" : ""
                     }`}
                 >
                   <NavDropdown.Item as="li">
