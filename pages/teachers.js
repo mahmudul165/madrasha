@@ -99,6 +99,7 @@ import { teachers } from '@/data/teachers';
 
 function OurOffices() {
   return (
+    <> <HeroBanner/>
     <div className="container my-4">
       <style>
         {`
@@ -122,7 +123,7 @@ function OurOffices() {
           }
         `}
       </style>
-      <HeroBanner></HeroBanner>
+     
 
       <SectionTitle title="আমাদের শিক্ষকরা" />
       <Row>
@@ -163,7 +164,7 @@ function OurOffices() {
         </Col>
         ))}
       </Row>
-    </div>
+    </div></>
   );
 }
 
