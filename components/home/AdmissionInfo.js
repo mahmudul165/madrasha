@@ -11,7 +11,7 @@ const AdmissionInfo = () => {
                 <div className="gx-0 row justify-content-center">
                     <div className="col-md-10">
                     {/* start */}
-                    <div className="gx-0 card shadow-lg border-0 rounded-4 p-4">
+                    <div className="gx-0 card shadow-lg border-0 rounded-4 p-4 bg-light">
                             <div className="  card-body p-4">
                                 {/* উপরের বিবরণ */}
                                 <div className="mb-4">
