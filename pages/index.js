@@ -181,13 +181,13 @@
 // pages/index.js
 import HeroBanner from '@/components/common/Banner';
 import AboutSection from '@/components/home/AboutSection';
-import { notices  } from '@/data/notices';
-import { images } from '@/data/gallery';
+
  
 import Head from 'next/head'
 import Link from 'next/link';
 import Script from 'next/script'
 import Gallery from '@/components/common/Gallery';
+import Notice from '@/components/common/Notice';
 
 export default function Home() {
   return (
@@ -268,40 +268,7 @@ export default function Home() {
         `}</style>
       </Head>
 
-      {/* Navbar */}
-      {/* <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">আমাদের মাদ্রাসা</a>
-          <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item"><a className="nav-link" href="#home">হোম</a></li>
-              <li className="nav-item"><a className="nav-link" href="#about">পরিচিতি</a></li>
-              <li className="nav-item"><a className="nav-link" href="#academics">বিভাগ</a></li>
-            
-
-<li className="nav-item"><a className="nav-link" href="#academics">শিক্ষক মন্ডলী</a></li>
- 
-              <li className="nav-item"><a className="nav-link" href="#notice">নোটিশ</a></li>
-              <li className="nav-item"><a className="nav-link" href="#gallery">গ্যালারি</a></li>
-              <li className="nav-item"><a className="nav-link" href="#admission">ভর্তি</a></li>
-              <li className="nav-item"><a className="nav-link" href="#contact">যোগাযোগ</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav> */}
-
-      {/* Hero */}
-      {/* <section className="hero" id="home">
-        <div className="container">
-          <h1>স্বাগতম আমাদের মাদ্রাসায়</h1>
-          <p>আলোকিত জীবন গঠনে দ্বীনি ও সাধারণ শিক্ষার সমন্বয়</p>
-          <a href="#admission" className="btn btn-custom mt-3">ভর্তি নিন</a>
-        </div>
-      </section> */}
-       <HeroBanner name="" />
+     <HeroBanner name="" />
 
       {/* About */}
       <AboutSection />
@@ -330,94 +297,10 @@ export default function Home() {
       </section>
 
       {/* Notice */}
-      {/* <section id="notice" className="py-5">
-        <div className="container">
-          <h2 className="section-title">নোটিশ বোর্ড</h2>
-          <ul className="list-group list-group-flush shadow-sm">
-            <li className="list-group-item">📌 ১. ৫ মে থেকে হিফজ ভর্তি শুরু।</li>
-            <li className="list-group-item">📌 ২. রমজান উপলক্ষে ক্লাস সময় পরিবর্তন হয়েছে।</li>
-            <li className="list-group-item">📌 ৩. ২১ এপ্রিল বার্ষিক ওয়াজ মাহফিল অনুষ্ঠিত হবে।</li>
-          </ul>
-        </div>
-      </section> */}
-        <div className="container py-5">
-      <h2 className="fw-bold mb-3">নোটিশ বোর্ড</h2>
-
-      {/* Notice list with sliding animation */}
-      <div className="notice-container">
-        {notices.map((notice) => (
-          <div key={notice.id} className="notice-card">
-            
-            <Link href={`/notices/${notice.id}`} legacyBehavior>
-              <a>
-                <div className="d-flex justify-content-center mb-3">
-                  {notice.image && (
-                    <img
-                      src={notice.image}
-                      alt={notice.title}
-                      width={280}
-                      height={160}
-                      className="img-fluid rounded"
-                    />
-                  )}
-                </div>
-                <div className="notice-info">
-                  <h5>{notice.title}</h5>
-                  <p className="text-muted">{notice.date}</p>
-                </div>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      <style jsx>{`
-        .notice-container {
-          display: flex;
-          overflow-x: scroll;
-          gap: 15px;
-          padding: 20px;
-        }
-
-        .notice-card {
-          flex: 0 0 auto;
-          width: 350px;
-          height: 300px;
-          background-color: #f9f9f9;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-          cursor: pointer;
-        }
-
-        .notice-card:hover {
-          transform: scale(1.05);
-        }
-
-        .notice-info {
-          padding: 10px;
-        }
-
-        .notice-info h5 {
-          font-size: 18px;
-          font-weight: bold;
-        }
-
-        .notice-info p {
-          font-size: 14px;
-          color: #666;
-        }
-
-        .notice-card a {
-          text-decoration: none;
-          color: inherit;
-        }
-      `}</style>
-    </div>
-
+     <Notice/>
      
       {/* Gallery */}
-<Gallery/>
+      <Gallery/>
 
       {/* Admission */}
       <section id="admission" className="py-5">

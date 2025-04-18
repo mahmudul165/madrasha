@@ -210,6 +210,14 @@ function Header() {
                     <Link href={"/video"}>ভিডিও</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link
+                  as="span"
+                  className={`${router.pathname === "/notices" ? "active-li" : ""
+                    }`}
+                >
+                  <Link href={"/notices"}>নোটিশ</Link>
+
+                </Nav.Link>
 {/* 
                 <Nav.Link
                   as="span"
