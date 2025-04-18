@@ -11,7 +11,7 @@ export const notices = [
       important: true,
       issuedBy: "মাদ্রাসা প্রশাসন",
       attachments: [
-        { name: "হিফজ ভর্তি ফরম", url: "/attachments/hiuz-form.pdf" },
+        { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
       ],
     },
     {
@@ -23,7 +23,9 @@ export const notices = [
       image: "/teacher-1.jpg", // Add image URL or local file path here
       important: false,
       issuedBy: "মাদ্রাসা প্রশাসন",
-      attachments: [],
+      attachments: [
+        { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
+      ],
     },
     {
       id: 3,
@@ -34,7 +36,9 @@ export const notices = [
       image: "/teacher-3.jpg", // Add image URL or local file path here
       important: false,
       issuedBy: "মাদ্রাসা প্রশাসন",
-      attachments: [],
+      attachments: [
+        { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
+      ],
     },
     {
         id: 1,
@@ -46,7 +50,7 @@ export const notices = [
         important: true,
         issuedBy: "মাদ্রাসা প্রশাসন",
         attachments: [
-          { name: "হিফজ ভর্তি ফরম", url: "/attachments/hiuz-form.pdf" },
+          { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
         ],
       },
       {
@@ -58,7 +62,9 @@ export const notices = [
         image: "/teacher-1.jpg", // Add image URL or local file path here
         important: false,
         issuedBy: "মাদ্রাসা প্রশাসন",
-        attachments: [],
+        attachments: [
+          { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
+        ],
       },
   ];
   
