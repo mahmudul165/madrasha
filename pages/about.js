@@ -183,10 +183,11 @@ function CardContent({ children, className = "" }) {
 
 export default function MadrasahPage() {
   return (
+    <>
+    <HeroBanner name="/পরিচিতি" />
     <div className="min-h-screen bg-gradient-to-tr from-green-50 to-white text-gray-800 px-4 md:px-10 py-8">
       {/* Hero Banner */}
-      <HeroBanner name="/পরিচিতি" />
-      
+           
       <div className="max-w-7xl mx-auto space-y-16">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -228,6 +229,7 @@ export default function MadrasahPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
