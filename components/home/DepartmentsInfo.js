@@ -84,9 +84,9 @@ const DepartmentsInfo = () => {
             সাপ্তাহিক, ইনকোর্স, সেমিস্টার এবং ক্লাস টেস্টের মাধ্যমে ফলাফল উন্নয়ন।
           </li>
           <li className="list-group-item">সিসিটিভি মনিটরিং দ্বারা সার্বক্ষণিক পর্যবেক্ষণ।</li>
-          <li className="list-group-item">
+          {/* <li className="list-group-item">
             ছারছীনা দারুসসুন্নাত জামেয়া-ই ইসলামিয়ার অনুসরণে হক্কানী আলেম তৈরির অঙ্গীকার।
-          </li>
+          </li> */}
         </ul>
       </div>
     </section>
