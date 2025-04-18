@@ -434,22 +434,22 @@ const HeroBanner = ({ name }) => {
       },
       {
         image: "/teacher-3.jpg",
-        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা- হোম"
+        title: "তাকওয়া-নূরানী ও হাফেজিয়া মাদ্রাসা"
       },
       {
         image: "/teacher-2.jpg",
-        title: "ইসলামিক শিক্ষার আলো ছড়াই"
+        title: "শিক্ষার্থীদের হিফজ প্রতিযোগিতা"
       },
       {
         image: "/teacher-1.jpg",
-        title: "শিক্ষার্থীদের হিফজ প্রতিযোগিতা"
+        title: "ইসলামিক শিক্ষার আলো ছড়াই"
       },
            
     ],
     "/about": [
       {
         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
-        title: "আমাদের সম্পর্কে"
+        title: "আদর্শ চরিত্র গঠনে শিক্ষা"
       },
       {
         image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
@@ -467,7 +467,7 @@ const HeroBanner = ({ name }) => {
       },
       {
         image: "https://themazine.com/html/Alquran-2/alquran/alquran/assets/images/gallery/7.jpg",
-        title: "আমাদের সম্পর্কে"
+        title: "আমাদের শিক্ষার্থী"
       },
       {
         image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
@@ -477,7 +477,7 @@ const HeroBanner = ({ name }) => {
     "/teachers": [
       {
         image: "/teacher-3.jpg",
-        title: "আমাদের সম্পর্কে"
+        title: "আদর্শ চরিত্র গঠনে শিক্ষা"
       },
       {
         image: "https://www.tahfeezulquran.org/wp-content/uploads/2023/08/DSC_7120-min-scaled.jpg",
