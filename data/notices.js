@@ -11,8 +11,8 @@ export const notices = [
       important: true,
       issuedBy: "মাদ্রাসা প্রশাসন",
       attachments: [
-        { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
-      ],
+        { name: "ভর্তি ফরম", url: "/attachment/email half yearly 2025.pdf" },
+      ], 
     },
     {
       id: 2,
@@ -63,7 +63,7 @@ export const notices = [
         important: false,
         issuedBy: "মাদ্রাসা প্রশাসন",
         attachments: [
-          { name: "হিফজ ভর্তি ফরম", url: "https://drive.google.com/file/d/1rCXBeiCOg5Jpw9xQ3O6sSyPNMQobeijh/view?usp=sharing" },
+          { name: "ভর্তি ফরম", url: "/attachment/email half yearly 2025.pdf" },
         ],
       },
   ];
