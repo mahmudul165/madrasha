@@ -182,7 +182,7 @@
 import HeroBanner from '@/components/common/Banner';
 import AboutSection from '@/components/home/AboutSection';
 
- 
+
 import Head from 'next/head'
 import Link from 'next/link';
 import Script from 'next/script'
@@ -206,9 +206,7 @@ export default function Home() {
         />
         <style>{`
           html { scroll-behavior: smooth; }
-          body { font-family: 'Noto Sans Bengali', sans-serif; background-color: #f9f9f9; }
-
-        
+          body { font-family: 'Noto Sans Bengali', sans-serif; background-color: #f9f9f9; }       
 
           .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -269,8 +267,7 @@ export default function Home() {
         `}</style>
       </Head>
 
-     <HeroBanner name="" />
-
+      <HeroBanner name="" />
       {/* About */}
       <AboutSection />
       {/* Academics */}
@@ -296,21 +293,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Notice */}
-     <Notice/>
-     
+      <Notice />
       {/* Gallery */}
-      <Gallery/>
-
+      <Gallery />
       {/* Admission */}
-      {/* <section id="admission" className="py-5">
-        <div className="container">
-          <h2 className="section-title">ভর্তি তথ্য</h2>
-          <p className="text-center">ভর্তির জন্য প্রয়োজন: জন্ম সনদ, ২ কপি ছবি, ও ভর্তি ফি ৫০০ টাকা। সময়: সকাল ৯টা - দুপুর ১টা। বয়স: ৫ বছরের উপরে।</p>
-        </div>
-      </section> */}
-<AdmissionInfo/>
+      <AdmissionInfo />
       {/* Contact */}
       <section id="contact" className="bg-light py-5">
         <div className="container">
