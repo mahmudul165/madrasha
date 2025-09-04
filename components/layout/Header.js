@@ -105,10 +105,10 @@ function Header() {
               </Nav.Item>
               <Nav.Item
                 as="li"
-              // className={`${router.pathname === "/" ? "active-li" : ""}`}
+              className={`${router.pathname === "/madrasaIntro" ? "active-li" : ""}`}
               >
                 <Nav.Link as="span">
-                  <Link href={"/"}>মাদ্রাসার পরিচিতি </Link>
+                  <Link href={"/madrasaIntro"}>মাদ্রাসার পরিচিতি </Link>
                 </Nav.Link>
               </Nav.Item>
               <NavDropdown
