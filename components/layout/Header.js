@@ -67,14 +67,13 @@ function Header() {
           sticky="top"
           // bg="light"
           expand={expand}
-         className="bg-light"
+          className="bg-light"
         // className={`row align-items-center    m-auto   navPosition py-2 ${
         //   scroll
         //     ? " bg-light container-fluid py-3 add-transition "
         //     : "container  add-transition-1 "
         // }`}
         >
-
           <div className="col-lg-5  col-sm-3  col-3">
             <Nav
               className="m-auto p-1 align-items-center  justify-content-center "
@@ -104,32 +103,26 @@ function Header() {
                   <Link href={"/"}>হোম</Link>
                 </Nav.Link>
               </Nav.Item>
+              <Nav.Item
+                as="li"
+              // className={`${router.pathname === "/" ? "active-li" : ""}`}
+              >
+                <Nav.Link as="span">
+                  <Link href={"/"}>মাদ্রাসার পরিচিতি </Link>
+                </Nav.Link>
+              </Nav.Item>
               <NavDropdown
-                title="পরিচিতি"
+                title="ব্যক্তিবর্গ"
                 id="collasible-nav-dropdown"
                 className={`${router.pathname === "/about" ? "active-li" : ""}`}
               >
                 <NavDropdown.Item as="li">
-                  <Link href={"/about"}>পরিচিতি </Link>
+                  <Link href={"/about"}>পরিচালক </Link>
                 </NavDropdown.Item>
-                {/* <NavDropdown.Item as="span">
-                  <Link href={"/press-releases"}>Press Releases</Link>
-                </NavDropdown.Item> */}
+                <NavDropdown.Item as="span">
+                  <Link href={"/teachers"}> শিক্ষক মন্ডলী </Link>
+                </NavDropdown.Item>
               </NavDropdown>
-              {/* <Nav.Link
-                as="span"
-                className={`${router.pathname === "/our-business" ? "active-li" : ""
-                  } text-nowrap`}
-              >
-                <Link href={"/our-business"}>বিভাগ</Link>
-              </Nav.Link> */}
-              <Nav.Link
-                as="span"
-                className={`${router.pathname === "/teachers" ? "active-li" : ""
-                    }`}
-              >
-                <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
-              </Nav.Link>
             </Nav>
           </div>
           <div className="col-lg-4  col-sm-2   col-3">
@@ -155,10 +148,8 @@ function Header() {
                     >
                       <Nav.Link as="span">
                         <Link href={"/"}>হোম</Link>
-
                       </Nav.Link>
                     </Nav.Item>
-
                     <NavDropdown
                       title="পরিচিতি"
                       id="collasible-nav-dropdown"
@@ -168,39 +159,10 @@ function Header() {
                       <NavDropdown.Item as="li">
                         <Link href={"/about"}>পরিচিতি </Link>
                       </NavDropdown.Item>
-                      {/* <NavDropdown.Divider /> */}
-                      {/* <NavDropdown.Item as="li">
-                        <Link href={"/press-releases"}>Press Releases</Link>
-                      </NavDropdown.Item> */}
                     </NavDropdown>
 
-                    {/* <NavDropdown
-                      title="Our Business"
-                      id="collasible-nav-dropdown"
-                      className={`${
-                        router.pathname === "/our-business" ? "active-li" : ""
-                      } `}
-                    >
-                      <NavDropdown.Item as="span">
-                        <Link href={"/our-business"}>পরিচিতি</Link>
-                      </NavDropdown.Item>
-                    </NavDropdown> */}
-                    {/* <Nav.Link
-                      as="span"
-                      className={`${router.pathname === "/our-brand" ? "active-li" : ""
-                        } text-nowrap`}
-                    >
-                      <Link href={"/our-brand"}>বিভাগ</Link>
 
-
-                    </Nav.Link> */}
-
-
-
-
-
-
-<Nav.Item
+                    <Nav.Item
                       as="li"
                       className={`${router.pathname === "/teachers" ? "active-li" : ""
                         }`}
@@ -210,14 +172,8 @@ function Header() {
 
                       </Nav.Link>
                     </Nav.Item>
-
-
-
-
                   </Nav>
                 </div>
-                
-
                 <NavDropdown
                   title="গ্যালারি"
                   id="collasible-nav-dropdown"
@@ -237,9 +193,7 @@ function Header() {
                     }`}
                 >
                   <Link href={"/notices"}>নোটিশ</Link>
-
                 </Nav.Link>
-
                 <Nav.Link
                   as="span"
                   className={`${router.pathname === "/contact" ? "active-li" : ""

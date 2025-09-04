@@ -1,0 +1,92 @@
+
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  FaUserPlus,
+  FaFileAlt,
+  FaUsers,
+  FaCrown,
+  FaSearch,
+  FaMoneyBill,
+  FaIdCard,
+  FaKey,
+  FaTable,
+  FaFingerprint,
+  FaGraduationCap,
+} from "react-icons/fa";
+
+const items = [
+  { label: "অনলাইনে ভর্তি", icon: <FaUserPlus size={28} />, color: "bg-success" },
+  { label: "ভর্তি আবেদন ফরম", icon: <FaFileAlt size={28} />, color: "bg-warning" },
+  { label: "শিক্ষার্থীসদস্য", icon: <FaUsers size={28} />, color: "bg-primary" },
+  { label: "কৃতি শিক্ষার্থী", icon: <FaCrown size={28} />, color: "bg-info" },
+  { label: "শিক্ষার্থী অনুসন্ধান", icon: <FaSearch size={28} />, color: "bg-danger" },
+  { label: "ফি প্রদান", icon: <FaMoneyBill size={28} />, color: "bg-success" },
+  { label: "আইডি কার্ড", icon: <FaIdCard size={28} />, color: "bg-warning" },
+  { label: "প্রবেশপত্র", icon: <FaKey size={28} />, color: "bg-secondary" },
+  { label: "শিক্ষার্থী রিপোর্ট", icon: <FaTable size={28} />, color: "bg-dark" },
+  { label: "শিক্ষার্থী হাজিরা", icon: <FaFingerprint size={28} />, color: "bg-secondary" },
+  { label: "পরীক্ষার ফলাফল", icon: <FaGraduationCap size={28} />, color: "bg-primary" },
+];
+
+export default function StudentCorner() {
+  return (
+    <div
+      className="bg-light container-fluid min-vh-100 py-5"
+    //   style={{
+    //     background: "linear-gradient(135deg, #e3f2fd, #bbdefb, #90caf9)",
+    //   }}
+    >
+      <h1 className="text-center fw-bold mb-5 display-6 text-dark">
+        🎓 শিক্ষার্থীর কর্ণার
+      </h1>
+      <div className="row g-4 justify-content-center">
+        {items.map((item, idx) => (
+          <div key={idx} className="col-6 col-md-4 col-lg-3">
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 1 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              className="card shadow-lg border-0 rounded-4 text-center p-4 h-100 position-relative overflow-hidden"
+              style={{
+                background: "linear-gradient(145deg, #ffffff, #f1f5f9)",
+              }}
+            >
+              {/* Floating Glow Effect */}
+              <div
+                className="position-absolute top-0 start-50 translate-middle-x rounded-circle"
+                style={{
+                  width: "120px",
+                  height: "120px",
+                  background: "radial-gradient(circle, rgba(0,123,255,0.2), transparent)",
+                  zIndex: 0,
+                }}
+              ></div>
+
+              {/* Icon */}
+              <motion.div
+                whileHover={{ rotate: 15 }}
+                className={`d-flex justify-content-center align-items-center mx-auto rounded-circle text-white mb-3 shadow ${item.color}`}
+                style={{ width: "75px", height: "75px", zIndex: 1 }}
+              >
+                {item.icon}
+              </motion.div>
+
+              {/* Label */}
+              <h6 className="fw-semibold text-dark mt-2" style={{ zIndex: 1 }}>
+                {item.label}
+              </h6>
+            </motion.div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+

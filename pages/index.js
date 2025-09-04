@@ -193,6 +193,7 @@ import ContactForm from '@/components/common/ContactForm';
 import IconWithBackground from "@/components/common/IconWithBackground";
 import { Card, Form } from "react-bootstrap";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import StudentCorner from '@/components/home/StudentCorner';
 
 export default function Home() {
   return (
@@ -278,6 +279,7 @@ export default function Home() {
       <AboutSection />
       {/* Academics */}
       <DepartmentsInfo/>
+      <StudentCorner/>
       
       {/* Notice */}
       <Notice />
