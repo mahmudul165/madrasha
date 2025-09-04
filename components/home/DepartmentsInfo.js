@@ -63,11 +63,12 @@ const DepartmentsInfo = () => {
       desc: "",
       color: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)"
     },
-    // {
-    //   title: "তাজবিদ বিভাগ",
-    //   desc: "সঠিকভাবে কুরআন তিলাওয়াত শেখানো হয়।",
-    //   color: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)"
-    // }
+   
+    {
+      title: "সাধারণ শিক",
+      desc: "শিশু শ্রেণী হইতে তৃতীয় শ্রেণি হবে।",
+      color: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)"
+    }
   ];
 
   return (
