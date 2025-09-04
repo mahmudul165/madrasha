@@ -175,47 +175,36 @@
 
 
 
-
-
-
-
-
-
-
-
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { Noto_Sans_Bengali } from 'next/font/google';
-import { memo } from 'react';
+import { Card } from 'react-bootstrap';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import IconWithBackground from '@/components/common/IconWithBackground';
 
-// Load Noto Sans Bengali font with next/font
-const notoSansBengali = Noto_Sans_Bengali({
-  subsets: ['bengali'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-noto-sans-bengali',
-});
-
-// Dynamic imports for all components to reduce initial bundle size
+// Dynamic imports for non-critical sections
 const HeroBanner = dynamic(() => import('@/components/common/Banner'), { ssr: true });
-const AboutSection = dynamic(() => import('@/components/home/AboutSection'), { ssr: true });
-const DepartmentsInfo = dynamic(() => import('@/components/home/DepartmentsInfo'), { ssr: true });
-const StudentCorner = dynamic(() => import('@/components/home/StudentCorner'), { ssr: true });
-const Gallery = dynamic(() => import('@/components/common/Gallery'), { ssr: false, loading: () => <div className="animate-pulse h-64 bg-gray-200" /> });
-const Notice = dynamic(() => import('@/components/common/Notice'), { ssr: true });
-const AdmissionInfo = dynamic(() => import('@/components/home/AdmissionInfo'), { ssr: true });
-const ContactForm = dynamic(() => import('@/components/common/ContactForm'), { ssr: false, loading: () => <div className="animate-pulse h-96 bg-gray-200" /> });
+const AboutSection = dynamic(() => import('@/components/home/AboutSection'));
+const Gallery = dynamic(() => import('@/components/common/Gallery'));
+const Notice = dynamic(() => import('@/components/common/Notice'));
+const AdmissionInfo = dynamic(() => import('@/components/home/AdmissionInfo'));
+const DepartmentsInfo = dynamic(() => import('@/components/home/DepartmentsInfo'));
+const ContactForm = dynamic(() => import('@/components/common/ContactForm'));
+const StudentCorner = dynamic(() => import('@/components/home/StudentCorner'));
 
-function Home() {
+export default function Home() {
   return (
-    <div className={notoSansBengali.variable}>
+    <>
       <Head>
         <title>তাকওয়া নূরানী ও হাফেজিয়া মাদ্রাসা</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Welcome to Taqwa Noorani and Hafizia Madrasa, dedicated to Islamic education and character building." />
-        <link rel="preload" href="/images/hero-bg.webp" as="image" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <HeroBanner name="" />
@@ -225,59 +214,55 @@ function Home() {
       <Gallery />
       <Notice />
       <AdmissionInfo />
-      <section className="container mx-auto my-4 p-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="space-y-6">
-            <div className="bg-white border rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <IconWithBackground>
-                  <FaPhoneAlt size={25} className="text-green-700" />
-                </IconWithBackground>
-                <div>
-                  <h5 className="text-lg font-bold text-green-800 mb-2">মোবাইল</h5>
-                  <p className="text-green-700">+৮৮০১৭০৮৫৮৮৫৯০</p>
-                  <p className="text-green-700">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
+
+      <section className="container my-2 p-2">
+        <div className="row my-4">
+          {/* Contact Info */}
+          <div className="col-md-4">
+            {[
+              {
+                icon: <FaPhoneAlt size={25} />,
+                title: 'মোবাইল',
+                lines: ['মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০', 'আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭'],
+              },
+              {
+                icon: <FaEnvelope size={25} />,
+                title: 'ইমেইল',
+                lines: ['madashatakua@heritagebd.com', 'info@heritagebd.com'],
+              },
+              {
+                icon: <FaMapMarkerAlt size={25} />,
+                title: 'ঠিকানা',
+                lines: ['কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও'],
+              },
+            ].map((item, idx) => (
+              <Card className="card border rounded p-4 mb-4" key={idx}>
+                <div className="d-flex gap-4 align-items-center">
+                  <IconWithBackground>{item.icon}</IconWithBackground>
+                  <div>
+                    <h5 className="mb-2">{item.title}</h5>
+                    {item.lines.map((line, i) => (
+                      <p key={i} className="text-secondary">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="bg-white border rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <IconWithBackground>
-                  <FaEnvelope size={25} className="text-green-700" />
-                </IconWithBackground>
-                <div>
-                  <h5 className="text-lg font-bold text-green-800 mb-2">ইমেইল</h5>
-                  <p className="text-green-700">madashatakua@heritagebd.com</p>
-                  <p className="text-green-700">info@heritagebd.com</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white border rounded-lg p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <IconWithBackground>
-                  <FaMapMarkerAlt size={25} className="text-green-700" />
-                </IconWithBackground>
-                <div>
-                  <h5 className="text-lg font-bold text-green-800 mb-2">ঠিকানা</h5>
-                  <p className="text-green-700">কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও</p>
-                </div>
-              </div>
-            </div>
+              </Card>
+            ))}
           </div>
-          <div className="md:col-span-2">
+
+          <div className="col-md-8">
             <ContactForm />
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
-export const getStaticProps = async () => {
-  return {
-    props: {},
-    revalidate: 3600, // Revalidate every 1 hour for faster ISR
-  };
-};
 
-export default memo(Home);
+
+
+
+

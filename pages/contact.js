@@ -28,10 +28,12 @@ const OurLocationCard = () => {
         <h5 className="my-2">অবস্থান ঠাকুরগাঁও</h5>
         <div className="mt-2">
           <p>
-            ঠিকানা: কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও
+           ঠিকানা: ছোট সিংগিয়া কলেজ রোড লাহিড়ী বালিয়াডাঙ্গী ঠাকুরগাঁও। 
+
           </p>
-          <p>মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০</p>
-          <p>আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
+          <p>মোবাইল: +৮৮০১৬১০৩৪৬৫৭৪</p>
+          <p>মোবাইল: +৮৮০১৭০৮৫৮৮৫৯৯</p>
+          
 
 
 
@@ -82,9 +84,9 @@ function contact() {
                 <div className="cus-color-secondary">
                   <h5 className="mb-2">মোবাইল</h5>
                   <p className="cus-color-secondary">
-                    মোবাইল: +৮৮০১৭০৮৫৮৮৫৯০
+                   মোবাইল: +৮৮০১৬১০৩৪৬৫৭৪
                   </p>{" "}
-                  <p className="cus-color-secondary">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p>
+                  {/* <p className="cus-color-secondary">আইপি ফোন: +৮৮০৯৬৭৮১১১৭৭৭</p> */}
                 </div>
               </div>
             </Card>
@@ -110,7 +112,7 @@ function contact() {
                 <div>
                   <h5 className="mb-2">ঠিকানা</h5>
                   <p className="cus-color-secondary">
-                    কলেজ রোড, লাহিড়ী, বালিয়াডাঙ্গী, ঠাকুরগাঁও{" "}
+                 ছোট সিংগিয়া কলেজ রোড লাহিড়ী বালিয়াডাঙ্গী ঠাকুরগাঁও। 
                   </p>
                 </div>
               </div>

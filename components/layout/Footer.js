@@ -191,12 +191,12 @@ const Footer = () => {
           <h1 className="fs-5 fw-bold cus-color-secondary">গুরুত্বপূর্ণ লিঙ্ক</h1>
           <ul className="demo">
         
-            <li><Link href="/about">পরিচিতি </Link></li>
-            <li><Link href="/">বিভাগ</Link></li>
+            <li><Link href="/madrasaIntro">মাদ্রাসার পরিচিতি</Link></li>
+            <li><Link href="/about">পরিচালক</Link></li>
             <li><Link href="/teachers">শিক্ষক মন্ডলী</Link></li>
             <li><Link href="/notices">নোটিশ</Link></li>
             <li><Link href="/picture">গ্যালারি</Link></li>
-            <li><Link href="#">ভর্তি</Link></li>
+            {/* <li><Link href="#">ভর্তি</Link></li> */}
             <li><Link href="/contact">যোগাযোগ</Link></li>
             {/* <li><a href="#">Term and condition</a></li> */}
           </ul>
@@ -230,9 +230,13 @@ const Footer = () => {
             <div className="mt-2">
               <div className="d-flex gap-2 justify-content-center py-2">
                 <FiPhoneCall size={35} className="text-warning" />
-                <p className="fs-3 fw-bold text-white">+8809678111744</p>
+                
+
+              
+
+                <p className="fs-3 fw-bold text-white">+৮৮০১৬১০৩৪৬৫৭৪</p>
               </div>
-              <p className="text-white fs-6 fw-bold">Mobile: 01708 588 450</p>
+              <p className="text-white fs-6 fw-bold">Mobile: ০১৭০৮৫৮৮৫৯৯</p>
               <p className="text-white fs-6 fw-bold">
                 Email: taqua@heritagebd.com
               </p>

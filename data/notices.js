@@ -1,4 +1,4 @@
-// data/notices.js
+
 
 export const notices = [
     {
