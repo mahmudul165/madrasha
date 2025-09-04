@@ -68,7 +68,7 @@ const DepartmentsInfo = () => {
   return (
     <section className="py-5 bg-white text-dark">
       <div className="container">
-        <h2 className="section-title text-center mb-5">কোর্স সমুহ</h2>
+        <h2 className="section-title text-center mb-5">কোর্স সমূহ</h2>
         <div className="row text-center">
           {departments.map((dept, index) => (
             <div className="col-md-3 mb-4" key={index}>

@@ -38,9 +38,8 @@ export default function StudentCorner() {
     //     background: "linear-gradient(135deg, #e3f2fd, #bbdefb, #90caf9)",
     //   }}
     >
-      <h1 className="text-center fw-bold mb-5 display-6 text-dark">
-        🎓 শিক্ষার্থীর কর্ণার
-      </h1>
+       
+      <h2 className="section-title">🎓 শিক্ষার্থীর কর্ণার</h2>
       <div className="row g-4 justify-content-center">
         {items.map((item, idx) => (
           <div key={idx} className="col-6 col-md-4 col-lg-3">

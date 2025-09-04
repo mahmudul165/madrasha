@@ -242,14 +242,14 @@ import React from "react";
 import { Row, Col, Card, Image } from "react-bootstrap";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-import HeroBanner from "@/components/common/Banner";
+
 import { teachers } from '@/data/teachers';
 
     
 
 function Teachers() {
   return (
-    <> <HeroBanner/>
+    <>  
     <div className="container my-4">
       <style>
         {`
