@@ -43,26 +43,31 @@ import { motion } from "framer-motion";
 
 const DepartmentsInfo = () => {
   const departments = [
+
+       
+  
+ 
+
     {
-      title: "হিফজ বিভাগ",
-      desc: "পূর্ণ কুরআন মুখস্থ করানো হয়।",
+      title: "নূরানী বিভাগ",
+      desc: "শিশু শ্রেণী হইতে তৃতীয় শ্রেণি।",
       color: "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)"
     },
     {
-      title: "নূরানী শিক্ষা",
+      title: "হিফজুল কুরআন",
       desc: "শিশুদের জন্য মৌলিক ইসলামী শিক্ষা।",
       color: "linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)"
     },
     {
-      title: "সাধারণ শিক্ষা",
-      desc: "প্রাথমিক থেকে অষ্টম শ্রেণি পর্যন্ত।",
+      title: "কিতাব বিভাগ",
+      desc: "",
       color: "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)"
     },
-    {
-      title: "তাজবিদ বিভাগ",
-      desc: "সঠিকভাবে কুরআন তিলাওয়াত শেখানো হয়।",
-      color: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)"
-    }
+    // {
+    //   title: "তাজবিদ বিভাগ",
+    //   desc: "সঠিকভাবে কুরআন তিলাওয়াত শেখানো হয়।",
+    //   color: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)"
+    // }
   ];
 
   return (
