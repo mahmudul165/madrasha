@@ -98,7 +98,7 @@
 //           <div className="container footer-card p-2 bg-success  ">
 //             <div className=" ">
 //               <div className="">
-//                 <p className="text-white fs-4 py-3 fw-bold">তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা</p>
+//                 <p className="text-white fs-4 py-3 fw-bold">তাকওয়া নূরানী ও হাফেজিয়া মাদ্রাসা</p>
 //               </div>
 //               <div className=" mt-2 ">
 //                 <div className="d-flex gap-2 justify-content-center  py-2 ">
@@ -225,7 +225,7 @@ const Footer = () => {
           </h1>
           <div className="container footer-card p-2 bg-success">
             <p className="text-white fs-4 py-3 fw-bold">
-              তাকওয়া-নূরানী ও হাফেজিয়া মাদরাসা
+              তাকওয়া নূরানী ও হাফেজিয়া মাদ্রাসা
             </p>
             <div className="mt-2">
               <div className="d-flex gap-2 justify-content-center py-2">

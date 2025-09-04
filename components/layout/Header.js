@@ -134,7 +134,7 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  {/* Sultan Tea */} তাকওয়া নূরানী ও হাফেজিয়া মাদরাসা
+                  {/* Sultan Tea */} তাকওয়া নূরানী ও হাফেজিয়া মাদ্রাসা
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
