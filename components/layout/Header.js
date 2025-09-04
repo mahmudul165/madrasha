@@ -68,11 +68,6 @@ function Header() {
           // bg="light"
           expand={expand}
           className="bg-light"
-        // className={`row align-items-center    m-auto   navPosition py-2 ${
-        //   scroll
-        //     ? " bg-light container-fluid py-3 add-transition "
-        //     : "container  add-transition-1 "
-        // }`}
         >
           <div className="col-lg-5  col-sm-3  col-3">
             <Nav
@@ -85,8 +80,8 @@ function Header() {
                   <Image
                     src={Logo}
                     alt="logo"
-                    width={120}
-                    height={120}
+                    width={150}
+                    height={150}
                     layout={500}
                   />
                 </Link>
