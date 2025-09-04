@@ -1,47 +1,16 @@
-// import React from 'react'
-// import { images } from '@/data/gallery';
-// function Gallery() {
-//   return (
-//     <section id="gallery" className="bg-light py-5">
-//   <div className="container">
-//     <h2 className="section-title">ছবির গ্যালারি</h2>
-//     <div className="row">
-//       {images?.map((img, i) => (
-//         <div className="col-12 col-md-4 mb-3" key={i}>
-//           <img
-//             src={img}
-//             className="img-fluid gallery-img"
-//             alt={`ছবি ${i + 1}`}
-//             style={{
-//               width: "100%",
-//               height: "250px",
-//               objectFit: "cover",
-//               borderRadius: "8px",
-//               transition: "transform 0.3s ease-in-out",
-//             }}
-//             // Hover effect to zoom in image on hover
-//             onMouseEnter={(e) => e.target.style.transform = "scale(1.1)"}
-//             onMouseLeave={(e) => e.target.style.transform = "scale(1)"}
-//           />
-//         </div>
-//       ))}
-//     </div>
-//   </div>
-// </section>
-//   )
-// }
-
-// export default Gallery
 
 
+
+"use client"; // Next.js 15 client component
 
 import React, { useState } from "react";
 import Image from "next/image";
 import { images } from "@/data/gallery";
+import { Row, Col, Button } from "react-bootstrap";
 
 const IMAGES_PER_PAGE = 9;
 
-function Gallery() {
+export default function Gallery() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(images.length / IMAGES_PER_PAGE);
 
@@ -57,10 +26,11 @@ function Gallery() {
   return (
     <section id="gallery" className="bg-light py-5">
       <div className="container">
-        <h2 className="section-title mb-4">ছবির গ্যালারি</h2>
-        <div className="row g-3">
+        <h2 className="section-title mb-4 text-center">ছবির গ্যালারি</h2>
+
+        <Row className="g-3">
           {currentImages.map((img, i) => (
-            <div className="col-12 col-sm-6 col-md-4" key={startIndex + i}>
+            <Col xs={12} sm={6} md={4} key={startIndex + i}>
               <div className="gallery-card">
                 <Image
                   src={img}
@@ -68,45 +38,51 @@ function Gallery() {
                   width={500}
                   height={300}
                   style={{ objectFit: "cover", borderRadius: "10px" }}
-                  priority={i < 3} // first 3 images of current page load faster
+                  priority={i < 3} // first 3 images priority for faster load
                   sizes="(max-width: 576px) 100vw,
                          (max-width: 768px) 50vw,
                          33vw"
+                  placeholder="blur"
+                  blurDataURL="/images/placeholder.png" // small blurred placeholder
                 />
               </div>
-            </div>
+            </Col>
           ))}
-        </div>
+        </Row>
 
         {/* Pagination */}
-        <div className="pagination mt-4 d-flex justify-content-center align-items-center gap-2">
-          <button
-            className="btn btn-primary btn-sm"
+        <div className="d-flex justify-content-center align-items-center gap-2 mt-4 flex-wrap">
+          <Button
+            size="sm"
+            variant="primary"
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
             পূর্বের
-          </button>
+          </Button>
+
           {Array.from({ length: totalPages }, (_, i) => (
-            <button
+            <Button
               key={i}
-              className={`btn btn-sm ${currentPage === i + 1 ? "btn-primary" : "btn-outline-primary"}`}
+              size="sm"
+              variant={currentPage === i + 1 ? "primary" : "outline-primary"}
               onClick={() => handlePageChange(i + 1)}
             >
               {i + 1}
-            </button>
+            </Button>
           ))}
-          <button
-            className="btn btn-primary btn-sm"
+
+          <Button
+            size="sm"
+            variant="primary"
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
             পরের
-          </button>
+          </Button>
         </div>
       </div>
 
-      {/* Styles */}
       <style jsx>{`
         .gallery-card {
           overflow: hidden;
@@ -128,12 +104,18 @@ function Gallery() {
           transform: scale(1.05);
         }
 
-        .pagination button {
-          min-width: 40px;
+        @media (max-width: 768px) {
+          .gallery-card img {
+            height: 200px !important;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .gallery-card img {
+            height: 180px !important;
+          }
         }
       `}</style>
     </section>
   );
 }
-
-export default Gallery;

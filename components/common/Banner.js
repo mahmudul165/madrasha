@@ -124,20 +124,6 @@ const HeroBanner = ({ name }) => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                {/* <div className="d-flex justify-content-between container align-items-center gap-2">
-                  <div className="bg-light px-4 py-1 rounded shadow-lg">
-                    <motion.h2
-                      className="fs-4 fw-bold text-capitalize text-dark"
-                      initial={{ y: 50, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      style={{ textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)" }}
-                    >
-                      {slide.title}
-                    </motion.h2>
-                    <p className="fs-6 text-light">হোম {name}</p>
-                  </div>
-                </div> */}
               </motion.div>
             </div>
           </motion.div>
@@ -216,3 +202,6 @@ const HeroBanner = ({ name }) => {
 };
 
 export default HeroBanner;
+
+
+
