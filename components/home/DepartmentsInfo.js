@@ -65,7 +65,7 @@ const DepartmentsInfo = () => {
     },
    
     {
-      title: "সাধারণ শিক",
+      title: "সাধারণ শিক্ষা",
       desc: "শিশু শ্রেণী হইতে তৃতীয় শ্রেণি হবে।",
       color: "linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)"
     }
