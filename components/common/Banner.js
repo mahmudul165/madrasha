@@ -75,7 +75,7 @@ const HeroBanner = ({ name }) => {
         title: "আদর্শ চরিত্র গঠনে শিক্ষা"
       },
       {
-        image: "/slider/slider-1.jpg",
+        image: "/slider/slider-5.jpg",
         title: "দীর্ঘ ইতিহাস ও গৌরব"
       },
       {
