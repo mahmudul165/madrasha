@@ -230,10 +230,6 @@ const Footer = () => {
             <div className="mt-2">
               <div className="d-flex gap-2 justify-content-center py-2">
                 <FiPhoneCall size={35} className="text-warning" />
-                
-
-              
-
                 <p className="fs-3 fw-bold text-white">+৮৮০১৬১০৩৪৬৫৭৪</p>
               </div>
               <p className="text-white fs-6 fw-bold">Mobile: ০১৭০৮৫৮৮৫৯৯</p>
