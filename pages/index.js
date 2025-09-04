@@ -281,10 +281,11 @@ export default function Home() {
       <DepartmentsInfo/>
       <StudentCorner/>
       
-      {/* Notice */}
-      <Notice />
+      
       {/* Gallery */}
       <Gallery />
+      {/* Notice */}
+      <Notice />
       {/* Admission */}
       <AdmissionInfo />
       {/* Contact */}
