@@ -150,28 +150,29 @@ function Header() {
                         <Link href={"/"}>হোম</Link>
                       </Nav.Link>
                     </Nav.Item>
-                    <NavDropdown
-                      title="পরিচিতি"
-                      id="collasible-nav-dropdown"
-                      className={`${router.pathname === "/about" ? "active-li" : ""
-                        }`}
-                    >
-                      <NavDropdown.Item as="li">
-                        <Link href={"/about"}>পরিচিতি </Link>
-                      </NavDropdown.Item>
-                    </NavDropdown>
-
-
                     <Nav.Item
-                      as="li"
-                      className={`${router.pathname === "/teachers" ? "active-li" : ""
-                        }`}
-                    >
-                      <Nav.Link as="span">
-                        <Link href={"/teachers"}>শিক্ষক মন্ডলী</Link>
+                as="li"
+              className={`${router.pathname === "/madrasaIntro" ? "active-li" : ""}`}
+              >
+                <Nav.Link as="span">
+                  <Link href={"/madrasaIntro"}>মাদ্রাসার পরিচিতি </Link>
+                </Nav.Link>
+              </Nav.Item>
+              <NavDropdown
+                title="ব্যক্তিবর্গ"
+                id="collasible-nav-dropdown"
+                className={`${router.pathname === "/about" ? "active-li" : ""}`}
+              >
+                <NavDropdown.Item as="li">
+                  <Link href={"/about"}>পরিচালক </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item as="span">
+                  <Link href={"/teachers"}> শিক্ষক মন্ডলী </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
 
-                      </Nav.Link>
-                    </Nav.Item>
+
+                     
                   </Nav>
                 </div>
                 <NavDropdown
