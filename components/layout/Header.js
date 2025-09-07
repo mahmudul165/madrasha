@@ -179,9 +179,9 @@ function Header() {
                   <NavDropdown.Item as="li">
                     <Link href={"/picture"}>ছবি</Link>
                   </NavDropdown.Item>
-                  <NavDropdown.Item as="li">
+                  {/* <NavDropdown.Item as="li">
                     <Link href={"/"}>ভিডিও</Link>
-                  </NavDropdown.Item>
+                  </NavDropdown.Item> */}
                 </NavDropdown>
                 <Nav.Link
                   as="span"
