@@ -150,8 +150,8 @@ export default function MadrasahPage() {
       {/* Hero Section */}
       <HeroBanner name="/পরিচিতি" />
 
-      <div className="min-h-screen bg-gradient-to-tr from-green-50 via-white to-green-50 text-gray-800 px-4 md:px-10 py-12">
-        <div className="max-w-7xl mx-auto space-y-20">
+      <div className="p-2 m-2 min-h-screen bg-gradient-to-tr from-green-50 via-white to-green-50 text-gray-800 px-4 md:px-10 py-12">
+        <div className="my-3 py-3 max-w-7xl mx-auto space-y-20">
           {/* Title */}
           <motion.h1
           initial={{ opacity: 0, y: -30 }}

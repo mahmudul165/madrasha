@@ -26,7 +26,7 @@ const queryClient = new QueryClient();
 // import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [isLoading, setIsLoading] = useState(true);
-//test
+  //test
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -40,10 +40,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <ThreeDotsWave />
       ) : (
         <>
-           <QueryClientProvider client={queryClient}>
-          <AuthProvider>          
-            <Component {...pageProps} />            
-          </AuthProvider>
+          <QueryClientProvider client={queryClient}>
+            <AuthProvider>
+              <Component {...pageProps} />
+            </AuthProvider>
           </QueryClientProvider>
         </>
       )
@@ -74,19 +74,17 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       {isLoading ? (
         <ThreeDotsWave />
       ) : (
-        <CartProvider>
-          <QueryClientProvider client={queryClient}>
-            <ChakraProvider>
+        // <CartProvider>
+        //   <QueryClientProvider client={queryClient}>
+        //     <ChakraProvider>
               <AuthProvider>
                 <Layout>
-                  {/* <AnimatePresence exitBeforeEnter> */}
-                  {} <Component {...pageProps} />
-                  {/* </AnimatePresence> */}
+                  <Component {...pageProps} />
                 </Layout>
               </AuthProvider>
-            </ChakraProvider>
-          </QueryClientProvider>
-        </CartProvider>
+        //     </ChakraProvider>
+        //   </QueryClientProvider>
+        // </CartProvider>
       )}
 
       {/* </CartProvider>
